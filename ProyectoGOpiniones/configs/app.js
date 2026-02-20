@@ -18,8 +18,8 @@ import {
 import authRoutes from '../src/auth/auth.routes.js';
 import userRoutes from '../src/users/user.routes.js';
 import postRoutes from '../src/posts/post.routes.js';
-// import commentRoutes from '../src/comments/comment.routes.js';
-// import likeRoutes from '../src/likes/like.routes.js';
+import commentRoutes from '../src/comments/comment.routes.js';
+import likeRoutes from '../src/likes/like.routes.js';
 
 const BASE_PATH = '/api/v1';
 
@@ -36,8 +36,8 @@ const routes = (app) => {
   app.use(`${BASE_PATH}/auth`, authRoutes);
   app.use(`${BASE_PATH}/users`, userRoutes);
   app.use(`${BASE_PATH}/posts`, postRoutes);
-  // app.use(`${BASE_PATH}/comments`, commentRoutes);
-  // app.use(`${BASE_PATH}/likes`, likeRoutes);
+  app.use(`${BASE_PATH}/comments`, commentRoutes);
+  app.use(`${BASE_PATH}/likes`, likeRoutes);
 
   app.get(`${BASE_PATH}/health`, (req, res) => {
     res.status(200).json({
