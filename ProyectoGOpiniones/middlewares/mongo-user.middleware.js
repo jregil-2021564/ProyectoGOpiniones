@@ -64,7 +64,7 @@ export const checkPostOwnership = async (req, res, next) => {
         const { id } = req.params;
         const mongoUserId = req.mongoUserId;
 
-        const Post = (await import('../posts/post.model.js')).default;
+        const Post = (await import('../src/posts/post.model.js')).default;
         const post = await Post.findById(id);
 
         if (!post) {
@@ -99,7 +99,7 @@ export const checkCommentOwnership = async (req, res, next) => {
         const { id } = req.params;
         const mongoUserId = req.mongoUserId;
 
-        const Comment = (await import('../comments/comment.model.js')).default;
+        const Comment = (await import('../src/comments/comment.model.js')).default;
         const comment = await Comment.findById(id);
 
         if (!comment) {
