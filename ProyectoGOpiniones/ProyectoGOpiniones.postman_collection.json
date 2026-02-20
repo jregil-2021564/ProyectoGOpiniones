@@ -1,0 +1,1024 @@
+{
+  "info": {
+    "_postman_id": "92929e74-e41e-42eb-8e10-ea0e25f21360",
+    "name": "ProyectoGOpiniones",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48332491",
+    "_collection_link": "https://go.postman.co/collection/48332491-92929e74-e41e-42eb-8e10-ea0e25f21360?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Autentificación",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Alejandro",
+                  "type": "text",
+                  "uuid": "32ef303a-f725-4021-92a0-90ab7c703941"
+                },
+                {
+                  "key": "surname",
+                  "value": "Selvi",
+                  "type": "text",
+                  "uuid": "1a2d2082-c2b9-45ab-9f51-0879a11ff96c"
+                },
+                {
+                  "key": "username",
+                  "value": "JoabRegil2008",
+                  "type": "text",
+                  "uuid": "2209b3f0-101b-4c00-8c48-77e2d3ac974b"
+                },
+                {
+                  "key": "email",
+                  "value": "kirsoalejo@gmail.com",
+                  "type": "text",
+                  "uuid": "9a49a1de-8480-43e7-9d0a-ce07a305e2df"
+                },
+                {
+                  "key": "password",
+                  "value": "kirso_alejo",
+                  "type": "text",
+                  "uuid": "1642bca5-d0fc-44f2-94c6-98e955eab3ac"
+                },
+                {
+                  "key": "phone",
+                  "value": "52361578",
+                  "type": "text",
+                  "uuid": "00a56fe6-12bd-4e8b-97d5-21296bab1a9d"
+                },
+                {
+                  "key": "profilePicture",
+                  "type": "file",
+                  "uuid": "1b06eab3-532c-409a-a743-959b7a2574f1",
+                  "src": [
+                    "/C:/Users/estua/Downloads/moni.jpg",
+                    "/D:/Imagenes/Screenshots/Captura de pantalla 2026-02-15 010018.png"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "resend-verification",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"alejandroarochavirula@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/resend-verification",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "resend-verification"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verify-email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"token\": \"MpfUfO_b1PAYIdvcxRWN82HVfVeDe32j98A1ZYpE7Gk\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/verify-email",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "verify-email"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"emailOrUsername\": \"kirsoalejo@gmail.com\",\r\n  \"password\": \"kirso_alejo\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forgot-password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"alejandroarochavirula@gmail.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/forgot-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "forgot-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reset-password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"token\": \"TOKEN_DEL_CORREO\",\r\n  \"newPassword\": \"NuevaPassword123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/reset-password",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user-list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiMmU3OTA2ZTgtNzI5My00MDRhLTkwNDQtNWE2MGFhOGZmMjBmIiwiaWF0IjoxNzcxNTQ5OTU4LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUxNzU4LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.mfVwI-T7J08l560R9gTmkEua1L5eFqIaW0HdnWpatgA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3005/api/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Perfil Propio",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiMmU3OTA2ZTgtNzI5My00MDRhLTkwNDQtNWE2MGFhOGZmMjBmIiwiaWF0IjoxNzcxNTQ5OTU4LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUxNzU4LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.mfVwI-T7J08l560R9gTmkEua1L5eFqIaW0HdnWpatgA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Roles de User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiMmU3OTA2ZTgtNzI5My00MDRhLTkwNDQtNWE2MGFhOGZmMjBmIiwiaWF0IjoxNzcxNTQ5OTU4LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUxNzU4LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.mfVwI-T7J08l560R9gTmkEua1L5eFqIaW0HdnWpatgA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3005/api/v1/users/usr_K4k3JPMMaj44/roles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "usr_K4k3JPMMaj44",
+                "roles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Perfil por ID",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"usr_K4k3JPMMaj44\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/auth/profile/by-id",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "profile",
+                "by-id"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Rol de User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzU1OGIxZTUtZWU5Mi00MmY0LWJlNTctNDU0ZDU4ZjQzNjU5IiwiaWF0IjoxNzcxNTUwMjYyLCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyMDYyLCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.Ih7VHRuvhyolYSu3_BuSVsbzI-of8439YRNhTlOw1yU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"roleName\": \"ADMIN_ROLE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/api/v1/users/{{user_id}}/role",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "{{user_id}}",
+                "role"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Entidades",
+      "item": [
+        {
+          "name": "Publicaciones",
+          "item": [
+            {
+              "name": "Agregar Publicacion",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiMjQyNzM4YTYtODM1Yi00ZWJjLTk4MGYtNGE2YmQ4NDE2MjFiIiwiaWF0IjoxNzcxNTUwNTA0LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyMzA0LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.yPQuJaGbn3VHlwf2pw1E8bjib9ohoCFDnmIyd9v949Y",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Mi primera opinión sobre tecnologíaa\",\r\n    \"category\": \"TECNOLOGIA\",\r\n    \"content\": \"Hoy quiero compartir mi experiencia con el nuevo framework de JavaScript. Es realmente impresionante cómo ha evolucionado el ecosistema en los últimos años. Las nuevas características hacen que el desarrollo sea mucho más eficiente y mantenible.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener Las Publicaciones",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts?page=1&limit=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener post por Categoria",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts?category=TECNOLOGIA&page=1&limit=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts"
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": "TECNOLOGIA"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener post por ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts/{{post_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts",
+                    "{{post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener post de User",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts/user/{{user_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts",
+                    "user",
+                    "{{user_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener post de User Copy",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzlmM2MxODgtNDhjZC00NDdhLWJiMjMtYjIyNzAwYmEyMGVmIiwiaWF0IjoxNzcxNTUwODQ3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyNjQ3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.B2z9xxLuJlh3gcxawlDZQV-lpVceril1EmjpONvQyoA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Mi experiencia actualizada con Node.js y Express\",\r\n    \"content\": \"Ampliando mi opinión, quiero agregar que Express.js es el complemento perfecto para crear APIs robustas y escalables. La combinación es imbatible.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts/{{post_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts",
+                    "{{post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Eliminar Publicacion",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzlmM2MxODgtNDhjZC00NDdhLWJiMjMtYjIyNzAwYmEyMGVmIiwiaWF0IjoxNzcxNTUwODQ3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyNjQ3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.B2z9xxLuJlh3gcxawlDZQV-lpVceril1EmjpONvQyoA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/posts/{{post_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "posts",
+                    "{{post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Comentarios",
+          "item": [
+            {
+              "name": "Agregar Comentario",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiOGM3YTNjMGQtZDE3YS00MjVhLWExNzktYWFiNThlYWY1MDg0IiwiaWF0IjoxNzcxNTUxMTE3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyOTE3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.jdrG1hma2s-X4GKa6BiHq8L-2DEuM2FTh82AVN1QXls",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"postId\": \"6997b95d11e02799de75b637\",\r\n    \"content\": \"¡Excelente opinión! Comparto completamente tu punto de vista sobre Node.js. Yo también he tenido una experiencia similar.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/comments",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener comments de Publicacion",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiOGM3YTNjMGQtZDE3YS00MjVhLWExNzktYWFiNThlYWY1MDg0IiwiaWF0IjoxNzcxNTUxMTE3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyOTE3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.jdrG1hma2s-X4GKa6BiHq8L-2DEuM2FTh82AVN1QXls",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/comments/post/{{post_id}}?page=1&limit=20",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments",
+                    "post",
+                    "{{post_id}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Actualizar Comentario",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiOGM3YTNjMGQtZDE3YS00MjVhLWExNzktYWFiNThlYWY1MDg0IiwiaWF0IjoxNzcxNTUxMTE3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyOTE3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.jdrG1hma2s-X4GKa6BiHq8L-2DEuM2FTh82AVN1QXls",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"content\": \"Actualizando mi comentario: después de leer más sobre el tema, creo que Node.js es aún más poderoso de lo que pensaba inicialmente.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/comments/{{comment_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments",
+                    "{{comment_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Eliminar Comentario",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiOGM3YTNjMGQtZDE3YS00MjVhLWExNzktYWFiNThlYWY1MDg0IiwiaWF0IjoxNzcxNTUxMTE3LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUyOTE3LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.jdrG1hma2s-X4GKa6BiHq8L-2DEuM2FTh82AVN1QXls",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/comments/{{comment_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments",
+                    "{{comment_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Likes",
+          "item": [
+            {
+              "name": "Dar Like",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzZlZWU4OTctZjI4Ni00YzQ4LThmYTQtNjBjYjgwYmRiOGQ5IiwiaWF0IjoxNzcxNTUxNzYyLCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUzNTYyLCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.XW0qV9Joqj3QhXUA2tqwfZIyAP2p7tgJvzbs3ZoQDW8",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"postId\": \"6997bbfd11e02799de75b65b\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/likes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "likes"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Quitar Like",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzZlZWU4OTctZjI4Ni00YzQ4LThmYTQtNjBjYjgwYmRiOGQ5IiwiaWF0IjoxNzcxNTUxNzYyLCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUzNTYyLCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.XW0qV9Joqj3QhXUA2tqwfZIyAP2p7tgJvzbs3ZoQDW8",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/likes/{{post_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "likes",
+                    "{{post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Verififcar si dieron like",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiYzZlZWU4OTctZjI4Ni00YzQ4LThmYTQtNjBjYjgwYmRiOGQ5IiwiaWF0IjoxNzcxNTUxNzYyLCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNTUzNTYyLCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.XW0qV9Joqj3QhXUA2tqwfZIyAP2p7tgJvzbs3ZoQDW8",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/likes/check/{{post_id}}",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "likes",
+                    "check",
+                    "{{post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Obtener User dieron Like",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3JfSzRrM0pQTU1hajQ0IiwianRpIjoiZWNhZWY0ZjktNzczZi00ZjRlLWFhMGEtNjQ0ZDA2MWFmMjQ0IiwiaWF0IjoxNzcxNDcyMTI2LCJyb2xlIjoiVVNFUl9ST0xFIiwiZXhwIjoxNzcxNDczOTI2LCJhdWQiOiJBdXRoU2VydmljZSIsImlzcyI6IkF1dGhTZXJ2aWNlIn0.L3tzCa5eqQ6lbmmGfh-u18IajO8Y9-O-qn0nURNtomE",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3005/api/v1/likes/post/{{post_id}}?page=1&limit=20",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3005",
+                  "path": [
+                    "api",
+                    "v1",
+                    "likes",
+                    "post",
+                    "{{post_id}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "20"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
